@@ -1,0 +1,115 @@
+For the below mentioned assignments write down the commands to achieve the final output
+
+1. Create a directory structure as shown below
+
+	/home/student
+		-> C_Programming
+				-> Day 1
+					-> Assignments
+						->Program1.c
+						->Program2.c
+				-> Day 2
+					-> Assignments
+						->Program1.c
+						->Program2.c
+					-> Notes
+						->Day2Notes.txt
+
+Answer:	
+
+	//Create Directories First
+	mkdir  -p  C_Programming/Day\ 1/Assignments && mkdir -p C_Programming/Day\ 2/Assignments && mkdir -p C_Programming/Day\ 2/Notes
+	//Create files under Day 1/Assignments
+	cd C_Programming/Day\ 1/Assignments && touch Program1.c Program2.c
+
+	//Create files under Day 2/Assignments
+	cd C_Programming/Day\ 2/Assignments && touch Program1.c Program2.c
+	
+	//Create files under Day2
+	cd C_Programming/Day\ 2/Notes && touch Day2Notes.txt
+
+
+					
+2. Create a directory structure /home/student/Day5/Assignment1/Coding where Day5, Assignment1 and Coding are not existing with a single mkdir command
+	
+Answer:
+
+	mkdir -p  /home/student/Day5/Assignment1/coding	
+	
+
+
+3. Make a copy of the directory structure mentioned in point 1  to a new directory called Programming, How to use cp command for copying directories?
+
+Answer:
+
+	//recursively copy the content from source to dest
+	cp -r C_Programming Programming	
+
+
+4. Remove Day2Notes.txt from the above copied directory
+
+Answer:
+
+	rm Programming/Day\ 2/Notes/Day2Notes.txt
+
+5. List down at least one more command line argument for following commands and give examples and brief explanation about what the argument does
+	-> ls
+	-> cp
+	-> mkdir
+	-> mv
+
+Answer:
+	
+	//prints the current directories list where size of file is in human readable format
+	name:~$ls -lh
+	
+	//copies all the content of the source directories into the destination directories recursively
+	name:~$cp -r sourcedir destdir
+	
+	//creats a parent directory as needed
+	name:~$mkdir -p first_dir/second_dir/third_dir
+
+	//move the file by explaining what is being done 
+	name:~$mkdir mv -v source_file ../dest_file
+
+
+Write down steps for below
+6. Convert following decimal numbers to binary, octal and hexadecimal
+	-> 4788923
+	-> 56737
+	-> 893223
+
+Answer:
+
+	4788923:
+
+		Binary		:0000 0000 0100 1001 0001 0010 1011 1011
+		Octal		:22211273
+		Hexadecimal	:4912BB
+
+	56737:
+		
+		Binary		:1101 1101 1010 0001
+		Octal		:156641
+		Hexadecimal	:DDA1
+
+	893223:
+		
+		Binary		:1101 1010 0001 0010 0111
+		Octal		:3320447
+		Hexadecimal	:DA127
+	
+7. Covert following binary numbers to decimal
+	-> 11000100010001000010001
+	-> 01000100001000100000101
+	-> 01011101001000101110101
+
+Answer:
+
+	
+	 11000100010001000010001	:6431249 
+
+	 01000100001000100000101	:2232581
+
+	 01011101001000101110101	:3051893
+
