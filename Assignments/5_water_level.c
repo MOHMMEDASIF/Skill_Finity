@@ -36,29 +36,37 @@ int main()
         printf("%-30s","Enter the current usage:    ");
         scanf("%d", &usage);
 
-        //Error Handling
-        //validate for the usage level greater then the current_water_level
-        if(usage >= current_water_level)
+        if(usage >= 0)
         {
-            printf("\nPresent Level : %d ltrs, Usage of %d ltr is Not Valid\n", current_water_level, usage);
-        }
+            //Error Handling
+            //validate for the usage level greater then the current_water_level
+            if(usage >= current_water_level)
+            {
+                printf("\nPresent Level : %d ltrs, Usage of %d ltr is Not Valid\n", current_water_level, usage);
+            }
 
-        //validate for the water_level less then or equal to 25ltrs
-        else if(current_water_level <= 25)
-        {
-            //initialize with 1000 litrs
-            current_water_level = 1000;
-        }
+            //validate for the water_level less then or equal to 25ltrs
+            else if(current_water_level <= 25)
+            {
+                //initialize with 1000 litrs
+                current_water_level = 1000;
+            }
 
-        else if((current_water_level  == usage) && (usage < 1000) && (usage < current_water_level))
-        {
-            //initialize to the water_lever = 1000 and then perform the calculation
-            current_water_level = 1000;
-            current_water_level -= usage;
+            else if((current_water_level  == usage) && (usage < 1000) && (usage < current_water_level))
+            {
+                //initialize to the water_lever = 1000 and then perform the calculation
+                current_water_level = 1000;
+                current_water_level -= usage;
+            }
+            else
+            {
+                current_water_level -= usage;
+            }
         }
         else
         {
-            current_water_level -= usage;
+            printf("\nPresent Level : %d ltrs, Usage of %d ltr is Not Valid\n", current_water_level, usage);
+
         }
 
         //prompt the user for option

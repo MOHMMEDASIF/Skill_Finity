@@ -70,12 +70,12 @@ int main()
                         }
                         else
                         {
-                            if(flag_pa == 0)
+                            if(flag_pa == 0 && doctor_status)
                             {
                                 system("clear");
                                 printf("\nDoctor is Busy With the patient..\n");
                             }
-                            else
+                            else 
                             {
                                 system("clear");
                                 printf("\nDoctor is not available...\n");
@@ -101,6 +101,8 @@ int main()
                         {
                             flag = 1;
                             doctor_status = 0;
+                            patient_status = 0;
+                            flag_pa = 1;
                         }
                         else if(doctor_status == 0)
                         {
